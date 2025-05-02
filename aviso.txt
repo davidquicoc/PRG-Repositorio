@@ -1,0 +1,86 @@
+David Q.
+Borrar este fichero al acabar el trabajo...
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Conector del mysql*.jar en la carpeta personal
+	> /home/user/mysql*.jar
+
+Para trabajar el JSP y HTML en NetBeans
+	> New Project
+		> Java With Ant
+			> Java Web --> Web Application (Añadir servidor Tomcat9 y Java EE Version)
+			   Trabajar con JSP (Por ahora)
+
+En carpeta personal, en el directorio de tomcat9 en bin/ ejecutar ./startup.sh
+	> /home/user/tomcat9/bin
+	> ./startup.sh
+	
+	localhost:8080/nombre_proyecto/pagina(en caso de que no se llame index)
+
+MySQL & phpmyadmin = root - root
+	localhost/phpmyadmin
+
+OpenJDK 8, 11, 21 (Default)
+
+Git Comando
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Idea de proyecto
+
+Base de datos: cine
+
+Tablas:
+
+-------------------------------
+|           PELICULA          |
+| --------------------------- |
+| ID_Pelicula INT PRIMARY KEY |
+| titulo VARCHAR (100)        |
+| genero VARCHAR (50)         |
+| duracion INT                |
+| clasificacion VARCHAR       |
+-------------------------------
+
+---------------------------
+|           SALA          |
+| ----------------------- |
+| ID_Sala INT PRIMARY KEY |
+| nombre VARCHAR (100)    |
+| Asientos INT            |
+| plazasMinusvalidos      |
+| clasificacion VARCHAR   |
+---------------------------
+
+-------------------------------
+|           SESIONES          |
+| --------------------------- |
+| ID_Sesion INT PRIMARY KEY   |
+| ID_Pelicula INT NOT NULL    |
+| ID_Sala INT NOT NULL        |
+| FechaHora DATETIME NOT NULL |
+|                             |
+| Investigar FOREIGN KEY      |
+-------------------------------
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Posible idea de página
+
+Página que se muestren las sesiones dados de alta y de baja
+
+A su vez se podría crear películas y salas, estas se podrían guardar para posteriormente ser añadidos en sesiones
+
+Posibilidad, dar avisos y advertencias de datos mal introducidos
+
+Mostrar en una tabla un pequeño listado (7 películas) que están de alta, o fueron modificados recientemente. Habrá un botón que dirija a otra página en donde se muestran las sesiones dadas de alta, y al final los de baja.
+
+HEADER
+
+Logo | Nav (Inicio (Muestra una introducción al Cine, muestra un pequeño listado de sesiones que están en alta), Gestión(Crear sesiones y películas y salas, ya sea de forma independiente o a la vez) | Listado (Página que muestra el listado de sesiones, películas, y salas))
+
+
+Esta tan solo es una idea de lo que yo tengo.
