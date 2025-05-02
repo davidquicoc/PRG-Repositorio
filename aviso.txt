@@ -25,6 +25,8 @@ OpenJDK 8, 11, 21 (Default)
 
 Git Comando
 
+Fichero SQL y contenido a introducir del proyecto: https://github.com/davidquicoc/PRG-Repositorio/tree/main
+
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Idea de proyecto
