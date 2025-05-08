@@ -13,29 +13,29 @@ USE `cine`;
 
 --	Estructura de tabla para la tabla `pelicula`
 --	`duracion` en minutos
-
+--	Recomendación para el url de imagen que sea de la página de filmaffinity
 --	Para tablas pelicula y sala: estado alta(V), baja (F)
 
 CREATE TABLE IF NOT EXISTS `pelicula` (
-  `ID_pelicula` VARCHAR(5) PRIMARY KEY,
-  `titulo` VARCHAR(150) NOT NULL,
-  `genero` VARCHAR(50) NOT NULL,
-  `duracion` INT NOT NULL,
-  `año` INT NOT NULL, 
-  `clasificacion` VARCHAR(5) NOT NULL,
-  `url` VARCHAR(255) NOT NULL
-  `estado` BOOLEAN NOT NULL
+	`ID_pelicula` VARCHAR(5) PRIMARY KEY,
+	`titulo` VARCHAR(150) NOT NULL,
+	`genero` VARCHAR(50) NOT NULL,
+	`duracion` INT NOT NULL,
+	`año` INT NOT NULL, 
+	`clasificacion` VARCHAR(20) NOT NULL,
+	`url` VARCHAR(255) NOT NULL,
+	`estado_pelicula` BOOLEAN NOT NULL
 );
 
-INSERT INTO `pelicula` (`ID_pelicula`, `titulo`, `genero`, `duracion`, `año`, `clasificacion`, `estado`) VALUES
-('P001', 'Thunderbolts*', 'Acción', 120, '2025', 'R', 'http://www.impawards.com/2025/posters/thunderbolts.jpg', TRUE),
-('P002', 'Una película de Minecraft', 'Comedia', 90, '2025', 'G', , TRUE),
-('P003', 'Until Dawn', 'Terror', 100, '2025', 'R', TRUE),
-('P004', 'El Contable 2', 'Acción', 110, '2025', 'PG-13', TRUE),
-('P005', 'Un funeral de locos', 'Comedia', 95, '2025', 'PG', TRUE),
-('P006', 'Los Pecadores', 'Drama', 105, '2025', 'NC-17', TRUE),
-('P007', 'El casoplón', 'Acción', 110, '2025', 'G', TRUE),
-('P008', 'Amateur', 'Acción', 110, '2025', 'PG-13', TRUE);
+INSERT INTO `pelicula` (`ID_pelicula`, `titulo`, `genero`, `duracion`, `año`, `clasificacion`, `estado_pelicula`) VALUES
+('P001', 'Thunderbolts*', 'Acción', 120, 2025, 'R', 'https://pics.filmaffinity.com/thunderbolts-198046674-mmed.jpg', TRUE),
+('P002', 'Una película de Minecraft', 'Comedia', 90, 2025, 'G', 'https://pics.filmaffinity.com/a_minecraft_movie-227832687-mmed.jpg', TRUE),
+('P003', 'Until Dawn', 'Terror', 100, 2025, 'R', 'https://pics.filmaffinity.com/until_dawn-880447124-mmed.jpg', TRUE),
+('P004', 'El Contable 2', 'Acción', 110, 2025, 'PG-13', 'https://pics.filmaffinity.com/the_accountant_2-296563604-mmed.jpg', TRUE),
+('P005', 'Un funeral de locos', 'Comedia', 95, 2025, 'PG', 'https://pics.filmaffinity.com/un_funeral_de_locos-332020688-mmed.jpg', TRUE),
+('P006', 'Los pecadores', 'Terror', 105, 2025, 'NC-17', 'https://pics.filmaffinity.com/sinners-306242848-mmed.jpg', TRUE),
+('P007', 'El casoplón', 'Comedia', 110, 2025, 'G', 'https://pics.filmaffinity.com/el_casoplon-993095418-mmed.jpg',TRUE),
+('P008', 'Amateur', 'Thriller', 110, 2025, 'PG-13', 'https://pics.filmaffinity.com/the_amateur-864303328-mmed.jpg', TRUE);
 
 -- Estructura de tabla para la tabla `sala`
 
@@ -44,10 +44,10 @@ CREATE TABLE IF NOT EXISTS `sala` (
 	`nombre` VARCHAR(50) NOT NULL,
 	`numeroAsientos` INT NOT NULL,
 	`plazasMinusvalido` BOOLEAN NOT NULL,
-	`estado` BOOLEAN NOT NULL
+	`estado_sala` BOOLEAN NOT NULL
 );
 
-INSERT INTO `sala` (`ID_sala`, `nombre`, `numeroAsientos`, `plazasMinusvalido`, `estado`) VALUES
+INSERT INTO `sala` (`ID_sala`, `nombre`, `numeroAsientos`, `plazasMinusvalido`, `estado_sala`) VALUES
 ('SA001', 'Sala 1', 200, TRUE, TRUE),
 ('SA002', 'Sala 2', 150, FALSE, TRUE),
 ('SA003', 'Sala 3', 300, TRUE, TRUE),
@@ -61,8 +61,8 @@ CREATE TABLE IF NOT EXISTS `sesion` (
 	`ID_pelicula` VARCHAR(5) NOT NULL,
 	`ID_sala` VARCHAR(5) NOT NULL,
 	`Fecha_Hora` DATETIME NOT NULL,
-	FOREIGN KEY (`ID_pelicula`) REFERENCES `pelicula`(`ID_pelicula`),
-	FOREIGN KEY (`ID_sala`) REFERENCES `sala`(`ID_sala`)
+	FOREIGN KEY (`ID_pelicula`) REFERENCES `pelicula`(`ID_pelicula`) ON DELETE CASCADE,
+	FOREIGN KEY (`ID_sala`) REFERENCES `sala`(`ID_sala`) ON DELETE CASCADE
 );
 
 INSERT INTO `sesion` (`ID_sesion`, `ID_pelicula`, `ID_sala`, `Fecha_Hora`) VALUES
@@ -80,7 +80,7 @@ INSERT INTO `sesion` (`ID_sesion`, `ID_pelicula`, `ID_sala`, `Fecha_Hora`) VALUE
 CREATE TABLE IF NOT EXISTS `usuarios` (
 	`ID_usuario` INT AUTO_INCREMENT PRIMARY KEY,
 	`username` VARCHAR(50) NOT NULL UNIQUE,
-	`password` VARCHAR(15) NOT NULL,
+	`password` VARCHAR(50) NOT NULL,
 	`rol` VARCHAR(20) NOT NULL
 );
 
