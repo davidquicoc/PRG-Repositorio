@@ -1,5 +1,5 @@
 --
---	PRG - Proyecto Web con Acceso a Datos (BD y Ficheros)
+--	Proyecto PRG - Proyecto Web con Acceso a Datos (BD y Ficheros)
 --	Autores: Néstor, Óscar, Ángel y David
 --
 
@@ -14,24 +14,28 @@ USE `cine`;
 --	Estructura de tabla para la tabla `pelicula`
 --	`duracion` en minutos
 
+--	Para tablas pelicula y sala: estado alta(V), baja (F)
+
 CREATE TABLE IF NOT EXISTS `pelicula` (
   `ID_pelicula` VARCHAR(5) PRIMARY KEY,
   `titulo` VARCHAR(150) NOT NULL,
   `genero` VARCHAR(50) NOT NULL,
   `duracion` INT NOT NULL,
   `año` INT NOT NULL, 
-  `clasificacion` VARCHAR(5) NOT NULL
+  `clasificacion` VARCHAR(5) NOT NULL,
+  `url` VARCHAR(255) NOT NULL
+  `estado` BOOLEAN NOT NULL
 );
 
-INSERT INTO `pelicula` (`ID_pelicula`, `titulo`, `genero`, `duracion`, `clasificacion`) VALUES
-('P001', 'Thunderbolts*', 'Acción', 120, '2025', 'R'),
-('P002', 'Una película de Minecraft', 'Comedia', 90, '2025', 'G'),
-('P003', 'Until Dawn', 'Terror', 100, '2025', 'R'),
-('P004', 'El Contable 2', 'Acción', 110, '2025', 'PG-13'),
-('P005', 'Un funeral de locos', 'Comedia', 95, '2025', 'PG'),
-('P006', 'Los Pecadores', 'Drama', 105, '2025', 'NC-17'),
-('P007', 'El casoplón', 'Acción', 110, '2025', 'G'),
-('P008', 'Amateur', 'Acción', 110, '2025', 'PG-13');
+INSERT INTO `pelicula` (`ID_pelicula`, `titulo`, `genero`, `duracion`, `año`, `clasificacion`, `estado`) VALUES
+('P001', 'Thunderbolts*', 'Acción', 120, '2025', 'R', 'http://www.impawards.com/2025/posters/thunderbolts.jpg', TRUE),
+('P002', 'Una película de Minecraft', 'Comedia', 90, '2025', 'G', , TRUE),
+('P003', 'Until Dawn', 'Terror', 100, '2025', 'R', TRUE),
+('P004', 'El Contable 2', 'Acción', 110, '2025', 'PG-13', TRUE),
+('P005', 'Un funeral de locos', 'Comedia', 95, '2025', 'PG', TRUE),
+('P006', 'Los Pecadores', 'Drama', 105, '2025', 'NC-17', TRUE),
+('P007', 'El casoplón', 'Acción', 110, '2025', 'G', TRUE),
+('P008', 'Amateur', 'Acción', 110, '2025', 'PG-13', TRUE);
 
 -- Estructura de tabla para la tabla `sala`
 
@@ -39,15 +43,16 @@ CREATE TABLE IF NOT EXISTS `sala` (
 	`ID_sala` VARCHAR(5) PRIMARY KEY,
 	`nombre` VARCHAR(50) NOT NULL,
 	`numeroAsientos` INT NOT NULL,
-	`plazasMinusvalido` BOOLEAN NOT NULL
+	`plazasMinusvalido` BOOLEAN NOT NULL,
+	`estado` BOOLEAN NOT NULL
 );
 
-INSERT INTO `sala` (`ID_sala`, `nombre`, `numeroAsientos`, `plazasMinusvalido`) VALUES
-('SA001', 'Sala 1', 200, TRUE),
-('SA002', 'Sala 2', 150, FALSE),
-('SA003', 'Sala 3', 300, TRUE),
-('SA004', 'Sala 4', 100, FALSE),
-('SA005', 'Sala 5', 250, TRUE);
+INSERT INTO `sala` (`ID_sala`, `nombre`, `numeroAsientos`, `plazasMinusvalido`, `estado`) VALUES
+('SA001', 'Sala 1', 200, TRUE, TRUE),
+('SA002', 'Sala 2', 150, FALSE, TRUE),
+('SA003', 'Sala 3', 300, TRUE, TRUE),
+('SA004', 'Sala 4', 100, FALSE, TRUE),
+('SA005', 'Sala 5', 250, TRUE, TRUE);
 
 -- Estructura de tabla para la tabla `sesion`
 
@@ -75,7 +80,7 @@ INSERT INTO `sesion` (`ID_sesion`, `ID_pelicula`, `ID_sala`, `Fecha_Hora`) VALUE
 CREATE TABLE IF NOT EXISTS `usuarios` (
 	`ID_usuario` INT AUTO_INCREMENT PRIMARY KEY,
 	`username` VARCHAR(50) NOT NULL UNIQUE,
-	`password` VARCHAR(5) NOT NULL,
+	`password` VARCHAR(15) NOT NULL,
 	`rol` VARCHAR(20) NOT NULL
 );
 
@@ -83,6 +88,3 @@ INSERT INTO `usuarios` (`username`, `password`, `rol`) VALUES
 
 ('admin', 'admin123', 'Administrador'),
 ('user', 'user123', 'Usuario');
-
--- Importar en localhost/phpmyadmin
-
