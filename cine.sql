@@ -17,7 +17,7 @@ USE `cine`;
 --	Para tablas pelicula y sala: estado alta(V), baja (F)
 
 CREATE TABLE IF NOT EXISTS `pelicula` (
-	`ID_pelicula` VARCHAR(5) PRIMARY KEY,
+	`ID_pelicula` VARCHAR(20) PRIMARY KEY,
 	`titulo` VARCHAR(150) NOT NULL,
 	`genero` VARCHAR(50) NOT NULL,
 	`duracion` INT NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `pelicula` (
 	`estado_pelicula` BOOLEAN NOT NULL
 );
 
-INSERT INTO `pelicula` (`ID_pelicula`, `titulo`, `genero`, `duracion`, `año`, `clasificacion`, `estado_pelicula`) VALUES
+INSERT INTO `pelicula` (`ID_pelicula`, `titulo`, `genero`, `duracion`, `año`, `clasificacion`, `url`,`estado_pelicula`) VALUES
 ('P001', 'Thunderbolts*', 'Acción', 120, 2025, 'R', 'https://pics.filmaffinity.com/thunderbolts-198046674-mmed.jpg', TRUE),
 ('P002', 'Una película de Minecraft', 'Comedia', 90, 2025, 'G', 'https://pics.filmaffinity.com/a_minecraft_movie-227832687-mmed.jpg', TRUE),
 ('P003', 'Until Dawn', 'Terror', 100, 2025, 'R', 'https://pics.filmaffinity.com/until_dawn-880447124-mmed.jpg', TRUE),
@@ -40,7 +40,7 @@ INSERT INTO `pelicula` (`ID_pelicula`, `titulo`, `genero`, `duracion`, `año`, `
 -- Estructura de tabla para la tabla `sala`
 
 CREATE TABLE IF NOT EXISTS `sala` (
-	`ID_sala` VARCHAR(5) PRIMARY KEY,
+	`ID_sala` VARCHAR(20) PRIMARY KEY,
 	`nombre` VARCHAR(50) NOT NULL,
 	`numeroAsientos` INT NOT NULL,
 	`plazasMinusvalido` BOOLEAN NOT NULL,
@@ -57,9 +57,9 @@ INSERT INTO `sala` (`ID_sala`, `nombre`, `numeroAsientos`, `plazasMinusvalido`, 
 -- Estructura de tabla para la tabla `sesion`
 
 CREATE TABLE IF NOT EXISTS `sesion` (
-	`ID_sesion` VARCHAR(5) PRIMARY KEY,
-	`ID_pelicula` VARCHAR(5) NOT NULL,
-	`ID_sala` VARCHAR(5) NOT NULL,
+	`ID_sesion` VARCHAR(20) PRIMARY KEY,
+	`ID_pelicula` VARCHAR(20) NOT NULL,
+	`ID_sala` VARCHAR(20) NOT NULL,
 	`Fecha_Hora` DATETIME NOT NULL,
 	FOREIGN KEY (`ID_pelicula`) REFERENCES `pelicula`(`ID_pelicula`) ON DELETE CASCADE,
 	FOREIGN KEY (`ID_sala`) REFERENCES `sala`(`ID_sala`) ON DELETE CASCADE
