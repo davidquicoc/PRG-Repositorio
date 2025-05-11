@@ -87,4 +87,4 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 INSERT INTO `usuarios` (`username`, `password`, `rol`) VALUES
 
 ('admin', 'admin123', 'Administrador'),
-('user', 'user123', 'Usuario');
+('user', 'user123', 'Editor');
