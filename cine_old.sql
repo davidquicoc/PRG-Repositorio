@@ -73,3 +73,7 @@ INSERT INTO `sesion` (`ID_sesion`, `ID_pelicula`, `ID_sala`, `Fecha_Hora`) VALUE
 ('SE005', 'P005', 'SA005', '2024-05-02 19:00:00'),
 ('SE006', 'P006', 'SA001', '2024-05-03 16:00:00'),
 ('SE007', 'P007', 'SA002', '2024-05-03 19:00:00');
+
+
+
+~/NetBeansProjects/Cine/web
