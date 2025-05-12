@@ -1,60 +1,8 @@
-Estado HTTP 500 – Internal Server Error
+Imprimir sesion/entrada (PDF o txt)
 
-Tipo Informe de Excepción
+Registrar usuario (Crear nuevo usuario)
 
-mensaje Ha sucedido una excepción al procesar la página JSP [/actualizarPelicula.jsp] en línea [35]
-
-Descripción El servidor encontró un error interno que hizo que no pudiera rellenar este requerimiento.
-
-excepción
-
-org.apache.jasper.JasperException: Ha sucedido una excepción al procesar la página JSP [/actualizarPelicula.jsp] en línea [35]
-
-32:                     "estado_pelicula = " + Boolean.parseBoolean(request.getParameter("estado_pelicula")) + " " + 
-33:                     "WHERE ID_pelicula =" + request.getParameter("ID_pelicula");
-34:             
-35:             stmt.execute(actualizar);
-36:             conexion.close();
-37:             
-38:             out.println("Película actualizada.");
-
-
-Stacktrace:
-	org.apache.jasper.servlet.JspServletWrapper.handleJspException(JspServletWrapper.java:584)
-	org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
-	org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:356)
-	org.apache.jasper.servlet.JspServlet.service(JspServlet.java:307)
-	javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-
-causa raíz
-
-javax.servlet.ServletException: java.sql.SQLSyntaxErrorException: Unknown column 'P001' in 'where clause'
-	org.apache.jasper.runtime.PageContextImpl.handlePageException(PageContextImpl.java:633)
-	org.apache.jsp.actualizarPelicula_jsp._jspService(actualizarPelicula_jsp.java:179)
-	org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:64)
-	javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:446)
-	org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:356)
-	org.apache.jasper.servlet.JspServlet.service(JspServlet.java:307)
-	javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-
-causa raíz
-
-java.sql.SQLSyntaxErrorException: Unknown column 'P001' in 'where clause'
-	com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
-	com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
-	com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837)
-	com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685)
-	org.apache.jsp.actualizarPelicula_jsp._jspService(actualizarPelicula_jsp.java:159)
-	org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:64)
-	javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:446)
-	org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:356)
-	org.apache.jasper.servlet.JspServlet.service(JspServlet.java:307)
-	javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-
-nota La traza completa de la causa de este error se encuentra en los archivos de registro del servidor.
-Apache Tomcat/9.0.104
+Peliculas
+	ORDER BY titulo
+	blanco y negro estado = false
+	
