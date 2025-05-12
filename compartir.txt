@@ -6,3 +6,8 @@ Peliculas
 	ORDER BY titulo
 	blanco y negro estado = false
 	
+
+Ficheros binarios
+Lectura y escritura de ficheros json
+
+(Óscar)
