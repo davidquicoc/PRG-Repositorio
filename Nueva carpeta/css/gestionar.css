@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100px;
+    background: #111111;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.header-nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.header-nav ul li {
+    padding: 0 20px;
+}
+
+.header-nav a,
+.header-user a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header-nav a:hover {
+    color: #ffdc46;
+    letter-spacing: 1.2px;
+}
+
+.header-user a:hover {
+    color: #70a2f5;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: dimgray;
+}
+
+.pelicula {
+    background-color: thistle;
+    width: 85%;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.div-pelicula {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: brown;
+    border: 3px solid #221;
+    margin-bottom: 25px;
+}
+
+.div-pelicula form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.div-pelicula div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.div-pelicula div:last-child {
+    margin-left: 5px;
+}
+
+#duracion { width: 58px; }
+
+#año { width: 60px; }
+
+.bloques-pelicula {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bloque-pelicula {
+    display: flex;
+    flex-direction: column;
+    width: 34.444%;
+    margin: 10px 0;
+    border: 2px solid black;
+}
+
+.pelicula-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.pelicula-imagen {
+    width: 35%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pelicula-imagen img {
+    width: 100%;
+    height: auto;
+}
+
+.pelicula-info {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: purple;
+    padding: 10px;
+}
+
+.pelicula-info p {
+    padding: 4px 2px;
+}
+
+.pelicula-info span {
+    font-size: 12px;
+}
+
+.pelicula-botones {
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: space-around;
+    padding: 13px;
+}
+
+.pelicula-botones input[type="submit"] {
+    background-color: aqua;
+    padding: 5px;
+}
+
+/*
+ *  SALAS
+ */
+
+.salas {
+    background-color: gray;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.bloque-crear-sala {
+    border: 2px solid mediumblue;
+    width: 90%;
+    background-color: aliceblue;
+    display: flex;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.bloque-crear-sala form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 3px solid peru;
+}
+
+.bloque-crear-sala div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.bloque-crear-sala div {
+    margin-left: 5px;
+}
+
+.info-sala {
+    border: 2px solid mediumblue;
+    width: 85%;
+    background-color: aliceblue;
+    display: flex;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.sala-bloque {
+    width: 70%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sala-button {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: brown;
+}
+
+.sala-button input[type="submit"] {
+    background-color: aqua;
+    padding: 5px;
+}
+
+/*
+ *  SESIONES
+ */
+.sesiones {
+    background-color: tomato;
+    padding: 20px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.crearSesion {
+    border: 2px solid mediumblue;
+    width: 75%;
+    background-color: aliceblue;
+    display: flex;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.crearSesion form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 3px solid peru;
+}
+
+.crearSesion div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.crearSesion div:last-child {
+    margin-left: 5px;
+}
+
+.bloqueSesiones {
+    border: 2px solid mediumblue;
+    width: 75%;
+    background-color: aliceblue;
+    display: flex;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.bloqueSesion {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.sesion-boton {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: brown;
+}
+
+.sesion-boton input[type="submit"] {
+    background-color: aqua;
+    padding: 5px;
+}
