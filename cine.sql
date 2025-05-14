@@ -43,11 +43,11 @@ CREATE TABLE IF NOT EXISTS `sala` (
 	`ID_sala` VARCHAR(20) PRIMARY KEY,
 	`nombre` VARCHAR(50) NOT NULL,
 	`numeroAsientos` INT NOT NULL,
-	`plazasMinusvalido` BOOLEAN NOT NULL,
+	`personaConMovilidadReducida` BOOLEAN NOT NULL,
 	`estado_sala` BOOLEAN NOT NULL
 );
 
-INSERT INTO `sala` (`ID_sala`, `nombre`, `numeroAsientos`, `plazasMinusvalido`, `estado_sala`) VALUES
+INSERT INTO `sala` (`ID_sala`, `nombre`, `numeroAsientos`, `personaConMovilidadReducida`, `estado_sala`) VALUES
 ('SA001', 'Sala 1', 200, TRUE, TRUE),
 ('SA002', 'Sala 2', 150, FALSE, TRUE),
 ('SA003', 'Sala 3', 300, TRUE, TRUE),
@@ -78,13 +78,18 @@ INSERT INTO `sesion` (`ID_sesion`, `ID_pelicula`, `ID_sala`, `Fecha_Hora`) VALUE
 -- Dicha tabla servirá para saber que usuarios pueden logear en la página web
 
 CREATE TABLE IF NOT EXISTS `usuarios` (
-	`ID_usuario` INT AUTO_INCREMENT PRIMARY KEY,
 	`username` VARCHAR(50) NOT NULL UNIQUE,
-	`password` VARCHAR(50) NOT NULL,
-	`rol` VARCHAR(20) NOT NULL
+	`password` VARCHAR(50) NOT NULL
 );
 
-INSERT INTO `usuarios` (`username`, `password`, `rol`) VALUES
+INSERT INTO `usuarios` (`username`, `password`) VALUES
 
-('admin', 'admin123', 'Administrador'),
-('user', 'user123', 'Editor');
+-- Se cambiará las contraseñas más adelante a tipo encriptado
+-- Guía: https://www.youtube.com/watch?v=T9QcOeohZIg
+
+('admin', 'admin123'),
+('user', 'user123'),
+('david', 'david123'),
+('nestor', 'nestor123'),
+('angel', 'angel123'),
+('oscar', 'oscar123');
