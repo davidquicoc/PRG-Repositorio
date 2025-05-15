@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100px;
+    background: #111111;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.header-nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.header-nav ul li {
+    padding: 0 20px;
+}
+
+.header-nav a,
+.header-user a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header-nav a:hover {
+    color: #ffdc46;
+    letter-spacing: 1.2px;
+}
+
+.header-user a:hover {
+    color: #70a2f5;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: dimgray;
+}
+
+section {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+}
+
+.bloque {
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+    border: 2px solid red;
+}
+
+.bloque-img {
+    display: flex;
+    flex-direction: column;
+}
+
+.año-pelicula {
+    z-index: 34;
+    position: absolute;
+    color: blue;
+    background: windowtext;
+}
+
+.extra-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.extra-info span {
+    background: aquamarine;
+}
+
+.bloque-img img {
+    width: 100%;
+    height: auto;
+}
+
+.image-original {
+    width: 100%;
+    height: auto;
+}
+
+image-color-gray {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
