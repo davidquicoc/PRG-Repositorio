@@ -1,0 +1,25 @@
+[
+
+    {
+        "ID_pelicula": "P####",
+        "titulo": "titulo_pelicula",
+        "genero": "genero_pelicula",
+        "duracion": "número entero, duración en minutos",
+        "año": "número entero",
+        "clasificacion": "G|PG|PG-13|R|NC-17",
+        "url": "https://pics.filmaffinity.com/...",
+        "estado_pelicula": true
+    },
+    
+    {   
+        "ID_pelicula": "P####",
+        "titulo": "titulo_pelicula",
+        "genero": "genero_pelicula",
+        "duracion": "número entero, duración en minutos",
+        "año": "número entero",
+        "clasificacion": "G|PG|PG-13|R|NC-17",
+        "url": "https://pics.filmaffinity.com/...",
+        "estado_pelicula": true
+    }
+
+]
