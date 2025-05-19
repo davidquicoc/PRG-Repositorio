@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100px;
+    background: #111111;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.header-nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.header-nav ul li {
+    padding: 0 20px;
+}
+
+.header-nav a,
+.header-user a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header-nav a:hover {
+    color: #ffdc46;
+    letter-spacing: 1.2px;
+}
+
+.header-user a:hover {
+    color: #70a2f5;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado {
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.encabezado h2 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.encabezado hr {
+    width: 120px;
+    margin: 2.1px 0;
+    text-align: center;
+    border: 1px solid #484949;
+}
+
+.encabezado hr:last-child {
+    width: 100px;
+}
+
+section {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.peliculas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pelicula {
+    border: 1px solid #6efe6c;
+    padding: 15px;
+    width: 250px;
+    background: white;
+    box-shadow: 0px 0px 12px #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.pelicula-baja {
+    border: 1px solid #fe6c6c;
+    padding: 15px;
+    width: 250px;
+    background: white;
+    box-shadow: 0px 0px 12px #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.pelicula:hover,
+.pelicula-baja:hover {
+    transform: scale(1.05);
+    transition: 0.3s
+    /*box-shadow: 2px 2px 12px #aaa;*/
+}
+
+.pelicula-header {
+    position: relative;
+}
+
+.año-pelicula {
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.pelicula h3,
+.pelicula-baja h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.pelicula p,
+.pelicula-baja p {
+    font-size: 14px;
+    margin: 4px 0;
+    color: #666;
+}
+
+.extra-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clasificacion, .duracion {
+    font-size: 14px;
+    color: #333;
+}

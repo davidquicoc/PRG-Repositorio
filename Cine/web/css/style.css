@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: sans-serif;
+} 
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100px;
+    background: #111111;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.header-nav ul li {
+    padding: 0 20px;
+}
+
+.header-nav a,
+.header-user a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header-nav a:hover {
+    color: #ffdc46;
+    letter-spacing: 1.2px;
+}
+
+.header-user a:hover {
+    color: #70a2f5;
+}
+
+.peliculas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pelicula {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 250px;
+    background: white;
+    box-shadow: 2px 2px 8px #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.pelicula:hover {
+    transform: scale(1.05);
+    transition: 0.3s
+    /*box-shadow: 2px 2px 12px #aaa;*/
+}
+
+.pelicula-header {
+    position: relative;
+}
+
+.año-pelicula {
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.pelicula h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.pelicula p {
+    font-size: 14px;
+    margin: 4px 0;
+    color: #666;
+}
+
+.extra-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clasificacion, .duracion {
+    font-size: 14px;
+    color: #333;
+}
+
+section > a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+section > a:hover {
+    color: #ffdc46;
+}

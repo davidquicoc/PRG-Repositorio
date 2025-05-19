@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100px;
+    background: #111111;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.header-nav ul li {
+    padding: 0 20px;
+}
+
+.header-nav a,
+.header-user a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header-nav a:hover {
+    color: #ffdc46;
+    letter-spacing: 1.2px;
+}
+
+.header-user a:hover {
+    color: #70a2f5;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px 0;
+}
+
+.pelicula {
+    background-color: #e6e6e6;
+    width: 85%;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: none;
+}
+
+.div-pelicula {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 2px solid #ccc;
+    background: #fafafa;
+    margin-bottom: 25px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.div-pelicula form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.div-pelicula div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+#duracion {
+    width: 58px;
+}
+
+#año {
+    width: 60px;
+}
+
+.bloques-pelicula {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.bloque-pelicula {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.pelicula-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.bloque-pelicula:hover {
+    transform: scale(1.05);
+    transition: 0.3s
+    /*box-shadow: 2px 2px 12px #aaa;*/
+}
+
+.pelicula-imagen {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+}
+
+.pelicula-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
+.pelicula-info {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.pelicula-info p {
+    padding: 4px 2px;
+    color: #333;
+    font-size: 14px;
+}
+
+.pelicula-info span {
+    font-size: 12px;
+    color: #666;
+}
+
+.pelicula-botones {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 13px;
+    background-color: #e6e6e6;
+}
+
+.pelicula-botones input[type="submit"] {
+    background-color: #999;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pelicula-botones input[type="submit"]:hover {
+    background-color: #666;
+}
+
+.salas {
+    background-color: #e6e6e6;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: none;
+}
+
+.bloque-crear-sala {
+    width: 90%;
+    background-color: #f9f9f9;
+    display: flex;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.bloque-crear-sala form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.bloque-crear-sala div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.info-sala {
+    width: 85%;
+    background-color: #f9f9f9;
+    display: flex;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.sala-bloque {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sala-button {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sala-button input[type="submit"] {
+    background-color: #999;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sala-button input[type="submit"]:hover {
+    background-color: #666;
+}
+
+.sesiones {
+    background-color: #e6e6e6;
+    padding: 20px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: none;
+}
+
+.crearSesion {
+    width: 75%;
+    background-color: #f9f9f9;
+    display: flex;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.crearSesion form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.crearSesion div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.bloqueSesiones {
+    width: 75%;
+    background-color: #f9f9f9;
+    display: flex;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.bloqueSesion {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.sesion-boton {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sesion-boton input[type="submit"] {
+    background-color: #999;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sesion-boton input[type="submit"]:hover {
+    background-color: #666;
+}
+

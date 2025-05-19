@@ -1,0 +1,12 @@
+
+P001 | Thunderbolts* | Acción | 120 | 2025 | R | https://pics.filmaffinity.com/thunderbolts-198046674-mmed.jpg | true
+P002 | Una película de Minecraft | Comedia | 90 | 2025 | G | https://pics.filmaffinity.com/a_minecraft_movie-227832687-mmed.jpg | true
+P003 | Until Dawn | Terror | 100 | 2025 | R | https://pics.filmaffinity.com/until_dawn-880447124-mmed.jpg | true
+P004 | El Contable 2 | Acción | 110 | 2025 | PG-13 | https://pics.filmaffinity.com/the_accountant_2-296563604-mmed.jpg | true
+P005 | Un funeral de locos | Comedia | 95 | 2025 | PG | https://pics.filmaffinity.com/un_funeral_de_locos-332020688-mmed.jpg | true
+P006 | Los pecadores | Terror | 105 | 2025 | NC-17 | https://pics.filmaffinity.com/sinners-306242848-mmed.jpg | false
+P007 | El casoplón | Comedia | 110 | 2025 | G | https://pics.filmaffinity.com/el_casoplon-993095418-mmed.jpg | true
+P008 | Amateur | Thriller | 110 | 2025 | PG-13 | https://pics.filmaffinity.com/the_amateur-864303328-mmed.jpg | true
+P009 | Una quinta portuguesa | Drama | 115 | 2025 | PG | https://pics.filmaffinity.com/una_quinta_portuguesa-396975052-mmed.jpg | true
+P010 | Warfare: Tiempo de guerra | Bélico | 95 | 2025 | NC-17 | https://pics.filmaffinity.com/warfare-534208810-mmed.jpg | true
+P011 | Anzu, gato Fantasma | Comedia | 97 | 2025 | G | https://pics.filmaffinity.com/bakeneko_anzu_chan-246368899-mmed.jpg | false
