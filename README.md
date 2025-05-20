@@ -2,9 +2,11 @@
 
 Descargar Cine.zip e importarlo en NetBeans
 Trabajo realizado por:
-  · Néstor
-  · Óscar
-  · Ángel
-  · David
+<ul>
+  <li>Néstor</li>
+  <li>Óscar</li>
+  <li>Ángel</li>
+  <li>David</li>
+</ul>
 
 1ºDAW - PRG
