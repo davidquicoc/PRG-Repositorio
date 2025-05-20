@@ -9,4 +9,4 @@
   <li>David</li>
 </ul>
 <hr>
-<p>1ºDAW - PRG</p>
+<p style="text-align:right;">1ºDAW - PRG</p>
