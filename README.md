@@ -1,6 +1,6 @@
 # PRG-Repository_AUX
 
-Descargar <b>Cine.zip</b> e importarlo en NetBeans
+Descargar <strong>Cine.zip</strong> e importarlo en NetBeans
 Trabajo realizado por:
 <ul>
   <li>Néstor</li>
@@ -8,5 +8,4 @@ Trabajo realizado por:
   <li>Ángel</li>
   <li>David</li>
 </ul>
-<br>
-<small>1ºDAW - PRG</small>
+1ºDAW - PRG
